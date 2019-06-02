@@ -17,7 +17,6 @@
 <body>
     <div class="wrapper">
         <div id="content">
-
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
 
@@ -31,72 +30,66 @@
                 </div>
             </nav>
 
-            <h2>Rezerwacja pokoju</h2>
+            <h2>Konta pracowników:</h2>
+
+            <button onclick="add_client()">Dodaj</button>
 
             <div class="line"></div>
-
-            <p>Podaj temin:</p>
-
-            <div class="form-group">
-                    <label for="start_date">Data zameldowania:</label>
-                    <input type="date" class="form-control" id="start_date">
-            </div>
-
-            <div class="form-group">
-                    <label for="end_date">Data wymeldowania:</label>
-                    <input type="date" class="form-control" id="end_date">
-            </div>
-
-            <!-- <div class="form-group">
-                    <label for="room_type">Typ pokoju:</label>
-                    <input type="text" class="form-control" id="room_type">
-            </div> -->
-
-
-            <div class="line"></div>
-
-            <p>Dostępne pokoje:</p>
 
             <table id="dtVerticalScrollExample" class="table table-striped table-bordered table-sm" cellspacing="0"
             width="100%">
             <thead>
               <tr>
-                <th class="th-sm">Numer pokoju
+                <th class="th-sm">Imie
                 </th>
-                <th class="th-sm">Liczba miejsc
+                <th class="th-sm">Nazwisko
                 </th>
-                <th class="th-sm">Typ pokoju
+                <th class="th-sm">Data urodzenia
                 </th>
-                <th class="th-sm">Cena pokoju
+                <th class="th-sm">Obywatelstwo
                 </th>
-                <th class="th-sm">Piętro
+                <th class="th-sm">E-mail
                 </th>
-                <th class="th-sm">Rezerwuj
+                <th class="th-sm">Miasto
+                </th>
+                <th class="th-sm">Kod miasta
+                </th>
+                <th class="th-sm">Ulica
+                </th>
+                <th class="th-sm">Numer domu
+                </th>
+                <th class="th-sm">Numer mieszkania
+                </th>
+                <th class="th-sm">Numer telefonu
+                </th>
+                <th class="th-sm">Edytuj
+                </th>
+                <th class="th-sm">Usuń
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>11</td>
-                <td>2</td>
-                <td>Standardowy</td>
-                <td>200</td>
+                <td>Jan</td>
+                <td>Nowak</td>
+                <td>1985/11/12</td>
+                <td>Polskie</td>
+                <td>jan.nowak@gmail.com</td>
+                <td>Wrocław</td>
+                <td>50-382</td>
+                <td>Kazimierza Wielkiego</td>
+                <td>10</td>
                 <td>1</td>
+                <td>123-456-789</td>
                 <td><input type="checkbox" id = "chckHead" /></td>
-              </tr>
-              <tr>
-                <td>12</td>
-                <td>2</td>
-                <td>Standardowy</td>
-                <td>200</td>
-                <td>1</td>
                 <td><input type="checkbox" id = "chckHead" /></td>
               </tr>
 
             </tbody>
             </table>
 
-            <button onclick="send()">Wyślij</button>
+          <button onclick="send()">Wyślij</button>
+
         </div>
     </div>
 
@@ -110,6 +103,14 @@
     <script>
         function send() {
 
+        }
+    </script>
+
+
+    <script>
+        function add_client() {
+            window.location.href = "add_client.html";
+            // window.location.replace("add_client.html");
         }
     </script>
 
