@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Panel zarządzający pracowanika hotelu</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Panel zarządzający pracowanika hotelu</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <p>Akcje</p>
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Zarządzaj rezerwacjami</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="reserve_room.html">Rezerwacja pokoju</a>
+                        </li>
+                        <li>
+                            <a href="cancel_reservation.html">Anulowanie rezerwacji</a>
+                        </li>
+                        <li>
+                            <a href="edit_reservation.html">Edycja rezerwacji</a>
+                        </li>
+                        <li>
+                            <a href="check_reserved.html">Sprawdzenie aktualnych rezerwacji</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="check_free.html">Sprawdź wolne pokoje</a>
+                </li>
+
+                <!-- czy w ogole potrzebujemy miec jakies konta klienta? mozna sie odwolywac przez dane i tyle -->
+                <li>
+                    <a href="add_client.html">Dodaj konto klienta</a>
+                </li>
+
+                <li>
+                    <a href="generate_bill.html">Generuj rachunek</a>
+                </li>
+                <li>
+                    <a href="check_history.html">Sprawdź historię</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Sekcja administratora</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="add_employee.html">Dodawanie konta pracowanika</a>
+                        </li>
+                        <li>
+                            <a href="remove_employee.html">Usuwanie konta pracowanika</a>
+                        </li>
+                        <li>
+                            <a href="check_employees.html">Sprawdzenie listy pracowników</a>
+                        </li>
+                        <li>
+                            <a href="edit_history.html">Edycja historii</a>
+                        </li>
+                        <li>
+                            <a href="edit_user_data.html">Edycja danych użytkownika</a>
+                        </li>
+                        <li>
+                            <a href="bill_correction.html">Korekta rachunku</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="home_login.html">Strona główna</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Włącz/wyłacz panel boczny</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="home_login.html">Wyloguj</a> <!-- jakiś trigger na wylogowanie -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <h2>Strona główna zarządzania hotelem</h2>
+
+            <div class="line"></div>
+
+            <p>Witaj</p>
+            <p>Na pasku po lewej zobaczysz swoje dostępne funkcjonalności.</p>
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
